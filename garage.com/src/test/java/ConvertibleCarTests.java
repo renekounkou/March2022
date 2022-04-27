@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class ConvertibleCarTests {
-	private ConvertibleCar Car;
+	private ConvertibleCar ConvertibleCar;
 
 	@BeforeClass
 	public void setup() {
@@ -17,22 +17,22 @@ public class ConvertibleCarTests {
 		String lowerTop = null;
 		String raiseTop = null;
 
-		this.Car = new ConvertibleCar(model, engine, ignitionSystem, lowerTop, raiseTop);
+		this.ConvertibleCar = new ConvertibleCar(model, engine, ignitionSystem);
 		
 	}
 
 	@Test
 	public void canBuildConvertibleCar() {
-		ConvertibleCar car = this.Car;
+		ConvertibleCar car = this.ConvertibleCar;
 
 		String actualModel = car.getModel();
 
-		assertEquals(actualModel, Car.getModel() , "Cannot build a Miata Model.");
+		assertEquals(actualModel, car.getModel() , "Cannot build a Miata Model.");
 	}
 
 	@Test
 	public void canStartConvertibleCar() {
-		ConvertibleCar car = this.Car;
+		ConvertibleCar car = this.ConvertibleCar;
 		
 		boolean isStarted = car.getIsStarted();
 
@@ -41,14 +41,14 @@ public class ConvertibleCarTests {
 
 	@Test
 	public void canLowerTop() {
-		ConvertibleCar car = this.Car;
+		ConvertibleCar car = this.ConvertibleCar;
 		String lowerTop = car.getLowerTop();
 		assertEquals(lowerTop, car.getLowerTop(), "The Top cannot be lowered.");
 	}
 
 	@Test
 	public void canRaiseTop() {
-		ConvertibleCar car = this.Car;
+		ConvertibleCar car = this.ConvertibleCar;
 		String raiseTop = car.getRaiseTop();
 		assertEquals(raiseTop, car.getRaiseTop(), "The Top cannot be raised.");
 	}

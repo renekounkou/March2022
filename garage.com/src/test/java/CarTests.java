@@ -14,7 +14,7 @@ public class CarTests {
 		ElectronicIgnition ignitionSystem = new ElectronicIgnition();
 		String lowerTop = null;
 		String raiseTop = null;
-		this.Car = new ConvertibleCar(model, engine, ignitionSystem, lowerTop, raiseTop);
+		this.Car = new Car(model, engine, ignitionSystem, lowerTop, raiseTop);
 	}
 
 	@Test

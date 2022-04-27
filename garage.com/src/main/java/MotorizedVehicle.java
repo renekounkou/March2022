@@ -6,7 +6,7 @@ public abstract class MotorizedVehicle {
 	private String lowerTop;
 	private String raiseTop;
 	
-	public MotorizedVehicle(String model, IEngine engine, IIgnition ignitionSystem, String lowerTop, String raiseTop) {
+	public MotorizedVehicle(String model, IEngine engine, IIgnition ignitionSystem) {
 		this.engine = engine;
 		this.model = model;
 		this.ignitionSystem = ignitionSystem;
