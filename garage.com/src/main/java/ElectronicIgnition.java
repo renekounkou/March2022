@@ -1,6 +1,4 @@
-
 public class ElectronicIgnition implements IIgnition {
-
 	private boolean IsOn;
 
 	public void turnOn() {
@@ -10,4 +8,5 @@ public class ElectronicIgnition implements IIgnition {
 	public boolean getIsOn() {
 		return this.IsOn;
 	}
+
 }
